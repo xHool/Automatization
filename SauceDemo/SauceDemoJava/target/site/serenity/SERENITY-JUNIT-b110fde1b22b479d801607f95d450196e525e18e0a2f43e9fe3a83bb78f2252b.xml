@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><testsuite errors="0" failures="1" name="Validate checkout information" skipped="0" tests="1" time="0.34" timestamp="2023-02-26 11:10:29"><testcase name="Checkout the total cart"><failure message="Cart validation failed expected:&lt;true&gt; but was:&lt;false&gt;" type="java.lang.AssertionError">Cart validation failed expected:&lt;true&gt; but was:&lt;false&gt;</failure><system-err>Cart validation failed expected:&lt;true&gt; but was:&lt;false&gt;&#13;
+com.sophossolutions.page.SwagLabsCart.validateProducts(SwagLabsCart.java:51)&#13;
+com.sophossolutions.stepdefinitions.SwagLabsInventoryStepDefinitions.se_valida_que_el_carrito_contenga_la_cantidad_de_productos_anteriormente_agregada(SwagLabsInventoryStepDefinitions.java:35)&#13;
+✽.Se valida que el carrito contenga la cantidad de productos anteriormente agregada. "3"(file:///C:/Users/willintong.ramirez/Desktop/Repositorios/Semillero.2023-1/SauceDemo/SauceDemoJava/src/test/resources/com/sophossolutions/features/swag_labs_checkout.feature:26)&#13;
+</system-err></testcase></testsuite>

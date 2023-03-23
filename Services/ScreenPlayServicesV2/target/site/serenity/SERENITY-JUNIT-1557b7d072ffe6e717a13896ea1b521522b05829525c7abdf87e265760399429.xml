@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><testsuite errors="0" failures="1" name="Title of your feature" skipped="0" tests="1" time="8.03" timestamp="2023-03-17 02:15:47"><testcase name="Title of your scenario"><failure message="1 expectation failed.&#10;Expected status code &lt;200&gt; but was &lt;523&gt;.&#10;" type="java.lang.AssertionError">1 expectation failed.
+Expected status code &lt;200&gt; but was &lt;523&gt;.
+</failure><system-err>1 expectation failed.
+Expected status code &lt;200&gt; but was &lt;523&gt;.
+&#13;
+com.sophossolutions.stepdefinitions.GetGoRestStepDefinition.validarElStatusCodeSeaYQueElEsquemaSeaCorrecto(GetGoRestStepDefinition.java:38)&#13;
+✽.Validar el statusCode sea 200 y que el esquema sea correcto "Go Schema"(file:///C:/Users/willintong.ramirez/Desktop/Repositorios/Semillero.2023-1/ScreenPlayServicesV2/src/test/resources/com/sophosolutions/features/get_go_rest.feature:9)&#13;
+</system-err></testcase></testsuite>

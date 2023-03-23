@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><testsuite errors="0" failures="1" name="Title of your feature" skipped="0" tests="1" time="4.34" timestamp="2023-02-26 11:03:36"><testcase name="Inventory"><failure message="La validacion del inventory falla expected:&lt;P[roducts]&gt; but was:&lt;P[RODUCTS]&gt;" type="java.lang.AssertionError">La validacion del inventory falla expected:&lt;P[roducts]&gt; but was:&lt;P[RODUCTS]&gt;</failure><system-err>La validacion del inventory falla expected:&lt;P[roducts]&gt; but was:&lt;P[RODUCTS]&gt;&#13;
+com.sophossolutions.page.SwagLabsInventory.validateText(SwagLabsInventory.java:22)&#13;
+com.sophossolutions.stepdefinitions.SwagLabsLoginStepDefinition.y_valida_el_mensaje_de_la_pagina_swag_labs_home_inventory(SwagLabsLoginStepDefinition.java:36)&#13;
+✽.y valida el mensaje de la pagina SwagLabsHomeInventory "Products".(file:///C:/Users/willintong.ramirez/Desktop/Repositorios/Semillero.2023-1/SauceDemo/SauceDemoJava/src/test/resources/com/sophossolutions/features/swag_labs_inventory.feature:26)&#13;
+</system-err></testcase></testsuite>

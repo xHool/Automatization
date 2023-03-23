@@ -1,0 +1,434 @@
+<html lang='en'><head><link href='prism/prism.css' rel='stylesheet' /></head><body><script src='prism/prism.js'></script><body><div><pre><code class='language-html'>&lt;html lang="en"&gt;<br/>
+ &lt;head&gt; <br/>
+  &lt;meta charset="utf-8"&gt; <br/>
+  &lt;meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"&gt; <br/>
+  &lt;meta name="description" content="TestSheepNZ landing page"&gt; <br/>
+  &lt;meta name="author" content="TestSheepNZ"&gt; <br/>
+  &lt;title&gt;The Number Game&lt;/title&gt; &lt;!-- Bootstrap core CSS --&gt; <br/>
+  &lt;link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet"&gt; &lt;!-- Custom fonts for this template --&gt; <br/>
+  &lt;link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css"&gt; <br/>
+  &lt;link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css"&gt; <br/>
+  &lt;link href="https://fonts.googleapis.com/css?family=Kaushan+Script" rel="stylesheet" type="text/css"&gt; <br/>
+  &lt;link href="https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic" rel="stylesheet" type="text/css"&gt; <br/>
+  &lt;link href="https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700" rel="stylesheet" type="text/css"&gt; &lt;!-- Custom styles for this template --&gt; <br/>
+  &lt;link href="css/agency.min.css" rel="stylesheet"&gt; <br/>
+  &lt;link rel="stylesheet" href="css/bootstrap.min.css"&gt; <br/>
+  &lt;link rel="shortcut icon" href="img/testsheep.ico" type="image/x-icon"&gt; <br/>
+  &lt;link rel="icon" href="img/testsheep.ico"&gt; <br/>
+ &lt;/head&gt; <br/>
+ &lt;body id="page-top"&gt; &lt;!-- Navigation --&gt; <br/>
+  &lt;nav class="navbar navbar-expand-lg navbar-dark fixed-top navbar-shrink" id="mainNav"&gt; <br/>
+   &lt;div id="mainNavigation"&gt;<br/>
+    &lt;nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav"&gt; <br/>
+     &lt;div class="container"&gt; &lt;a class="navbar-brand js-scroll-trigger" href="./index.html#page-top"&gt;TestSheepNZ&lt;/a&gt; &lt;button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"&gt; Menu &lt;i class="fas fa-bars"&gt;&lt;/i&gt; &lt;/button&gt; <br/>
+      &lt;div class="collapse navbar-collapse" id="navbarResponsive"&gt; <br/>
+       &lt;ul class="navbar-nav text-uppercase ml-auto"&gt; <br/>
+        &lt;li class="nav-item"&gt; &lt;a class="nav-link js-scroll-trigger" href="./index.html#the-number-game"&gt;Number Game&lt;/a&gt; &lt;/li&gt; <br/>
+        &lt;li class="nav-item"&gt; &lt;a class="nav-link js-scroll-trigger" href="./index.html#test-automation-resources"&gt;Automation Kata&lt;/a&gt; &lt;/li&gt; <br/>
+        &lt;li class="nav-item"&gt; &lt;a class="nav-link js-scroll-trigger" href="./index.html#workshop-material"&gt;Workshops&lt;/a&gt; &lt;/li&gt; <br/>
+        &lt;li class="nav-item"&gt; &lt;a class="nav-link js-scroll-trigger" href="./index.html#media"&gt;Media&lt;/a&gt; &lt;/li&gt; <br/>
+        &lt;li class="nav-item"&gt; &lt;a class="nav-link js-scroll-trigger" href="./index.html#mike-talks"&gt;Mike Talks&lt;/a&gt; &lt;/li&gt; <br/>
+       &lt;/ul&gt; <br/>
+      &lt;/div&gt; <br/>
+     &lt;/div&gt; <br/>
+    &lt;/nav&gt;<br/>
+   &lt;/div&gt; <br/>
+  &lt;/nav&gt; &lt;!-- Header --&gt; <br/>
+  &lt;header class="masthead"&gt; <br/>
+   &lt;div class="container"&gt; <br/>
+    &lt;div class="intro-text"&gt; <br/>
+     &lt;div class="intro-heading text-uppercase"&gt;<br/>
+      The Number Game<br/>
+     &lt;/div&gt; <br/>
+     &lt;img src="img/dice.JPG"&gt; <br/>
+     &lt;div class="intro-lead-in"&gt;<br/>
+      How good a tester are you?<br/>
+     &lt;/div&gt; &lt;a class="btn btn-primary btn-xl text-uppercase js-scroll-trigger" onclick="toggleLogging()" hidden&gt;Logging&lt;/a&gt; &lt;a class="btn btn-primary btn-xl text-uppercase js-scroll-trigger" href="./random-game-instructions.html"&gt;Instructions&lt;/a&gt; <br/>
+    &lt;/div&gt; <br/>
+   &lt;/div&gt; <br/>
+  &lt;/header&gt; &lt;!-- Contents --&gt; <br/>
+  &lt;section class="bg-light page-section" id="the-number-game"&gt; <br/>
+   &lt;div class="container"&gt; <br/>
+    &lt;div class="row"&gt; <br/>
+     &lt;div class="col-lg-12 text-center"&gt; <br/>
+      &lt;form id="ruleList" class="form-horizontal" method="post" action=""&gt; <br/>
+       &lt;p&gt; &lt;/p&gt;<br/>
+       &lt;div class="row"&gt; <br/>
+        &lt;div class="col-lg-12" align="centre"&gt; <br/>
+         &lt;h1&gt;Choose a build to test ...&lt;/h1&gt; &lt;i&gt; &lt;p&gt; This page simulates rolling a pair of 6-sided dice to generate a random number.&lt;br&gt; Guess the number - you'll be told "correct", "too high", "too low" or "not a number". &lt;/p&gt;&lt;/i&gt; <br/>
+        &lt;/div&gt; <br/>
+       &lt;/div&gt; <br/>
+      &lt;/form&gt; <br/>
+      &lt;form id="setGameForm" class="form-horizontal" method="post" action=""&gt; <br/>
+       &lt;div class="row"&gt; <br/>
+        &lt;div class="col-lg-3"&gt;&lt;/div&gt; <br/>
+        &lt;div class="col-lg-3"&gt; &lt;label class="description" id="buildID" for="buildNumber"&gt;Select build:&lt;/label&gt; <br/>
+        &lt;/div&gt; <br/>
+        &lt;div class="col-lg-3"&gt; &lt;select style="font-size:25px;" class="element select medium" id="buildNumber" name="buildNumber" onchange="selectBuild(this.preset)"&gt; &lt;option value="-1"&gt;&lt;/option&gt; &lt;option value="0"&gt;Demo&lt;/option&gt; &lt;option value="1"&gt;1&lt;/option&gt; &lt;option value="2"&gt;2&lt;/option&gt; &lt;option value="3"&gt;3&lt;/option&gt; &lt;option value="4"&gt;4&lt;/option&gt; &lt;option value="5"&gt;5&lt;/option&gt; &lt;option value="6"&gt;6&lt;/option&gt; &lt;option value="7"&gt;7&lt;/option&gt; &lt;option value="8"&gt;8&lt;/option&gt; &lt;option value="9"&gt;9&lt;/option&gt; &lt;option value="10"&gt;10&lt;/option&gt; &lt;option value="11"&gt;11&lt;/option&gt; &lt;option value="12"&gt;12&lt;/option&gt; &lt;option value="13"&gt;13&lt;/option&gt; &lt;/select&gt; <br/>
+        &lt;/div&gt; <br/>
+        &lt;div class="col-lg-3"&gt;&lt;/div&gt; <br/>
+       &lt;/div&gt; <br/>
+       &lt;p&gt; &lt;/p&gt;<br/>
+      &lt;/form&gt; <br/>
+      &lt;form id="rollDiceForm" class="form-horizontal" method="post" action=""&gt; <br/>
+       &lt;div class="row"&gt; <br/>
+        &lt;div class="col-lg-3"&gt;&lt;/div&gt; <br/>
+        &lt;div class="col-lg-3"&gt; &lt;label class="description" id="gameSelected"&gt;Game selected&lt;/label&gt; <br/>
+        &lt;/div&gt; <br/>
+        &lt;div class="col-lg-3"&gt; <br/>
+         &lt;input type="button" class="btn btn-primary" id="rollDiceButton" value="Re-roll" onclick="rollDice()"&gt; <br/>
+        &lt;/div&gt; <br/>
+        &lt;div class="col-lg-3"&gt;&lt;/div&gt; <br/>
+       &lt;/div&gt; <br/>
+       &lt;p&gt; &lt;/p&gt;<br/>
+       &lt;div class="row" id="rollDiceRow" hidden&gt; <br/>
+        &lt;div class="col-lg-3"&gt;&lt;/div&gt; <br/>
+        &lt;div class="col-lg-3"&gt; &lt;label class="description" id="rollDiceLabel"&gt;Rolling dice ...&lt;/label&gt; <br/>
+        &lt;/div&gt; <br/>
+        &lt;div class="col-lg-3" id="rollDiceGif"&gt; <br/>
+         &lt;img src="img/rolling_dice.gif"&gt; <br/>
+        &lt;/div&gt; <br/>
+        &lt;div class="col-lg-3"&gt;&lt;/div&gt; <br/>
+       &lt;/div&gt; <br/>
+      &lt;/form&gt; <br/>
+      &lt;form id="numGuessForm" class="form-horizontal" method="post" action=""&gt; <br/>
+       &lt;div class="row"&gt; <br/>
+        &lt;div class="col-lg-12"&gt; &lt;label class="description" id="Game selected"&gt;Guess the number...&lt;/label&gt; <br/>
+        &lt;/div&gt; <br/>
+       &lt;/div&gt; <br/>
+       &lt;div class="row"&gt; <br/>
+        &lt;div class="col-lg-12"&gt; &lt;label class="description" id="turnNumber"&gt;Turn: 5&lt;/label&gt; <br/>
+        &lt;/div&gt; <br/>
+       &lt;/div&gt; <br/>
+       &lt;div class="row"&gt; <br/>
+        &lt;div class="col-lg-3"&gt;&lt;/div&gt; <br/>
+        &lt;div class="col-lg-3 input-group-lg" align="middle"&gt; <br/>
+         &lt;input id="numberGuess" name="numberGuess" class="input-group-text" type="text" maxlength="6" value="" onkeydown="return (event.keyCode!=13);"&gt; <br/>
+         &lt;p&gt;&lt;/p&gt; <br/>
+        &lt;/div&gt; <br/>
+        &lt;div class="col-lg-3"&gt; <br/>
+         &lt;input type="button" class="btn btn-primary" id="submitButton" value="Submit" onclick="submitNumber()" disabled&gt; <br/>
+         &lt;p&gt;&lt;/p&gt; <br/>
+        &lt;/div&gt; <br/>
+        &lt;div class="col-lg-3"&gt;&lt;/div&gt; <br/>
+       &lt;/div&gt; <br/>
+       &lt;p&gt; &lt;/p&gt;<br/>
+       &lt;div class="row"&gt; <br/>
+        &lt;div class="col-lg-12"&gt; &lt;label class="description" id="feedbackLabel" value=""&gt;&lt;font size="+2" color="black"&gt;&lt;b&gt;&lt;i&gt;Correct, it took 5 turns!&lt;/i&gt;&lt;/b&gt;&lt;/font&gt;&lt;/label&gt; <br/>
+        &lt;/div&gt; <br/>
+       &lt;/div&gt; <br/>
+       &lt;div class="row" hidden id="logingElement"&gt; <br/>
+        &lt;div class="col-lg-12"&gt; &lt;textarea id="logForm" rows="10" cols="50"&gt;&lt;/textarea&gt; <br/>
+        &lt;/div&gt; <br/>
+       &lt;/div&gt; <br/>
+       &lt;p&gt; &lt;/p&gt;<br/>
+       &lt;div class="row"&gt; <br/>
+        &lt;div class="col-lg-12"&gt; &lt;a href="https://github.com/TestSheepNZ/TestSheepNZ.github.io/issues"&gt;GitHub issues register&lt;/a&gt; <br/>
+        &lt;/div&gt; <br/>
+       &lt;/div&gt; <br/>
+       &lt;p&gt; &lt;/p&gt;<br/>
+      &lt;/form&gt; <br/>
+     &lt;/div&gt; <br/>
+    &lt;/div&gt; <br/>
+   &lt;/div&gt; <br/>
+  &lt;/section&gt; &lt;!-- Modal 1 --&gt; <br/>
+  &lt;div class="portfolio-modal modal fade" id="termsModal" tabindex="-1" role="dialog" aria-hidden="true"&gt; <br/>
+   &lt;div class="modal-dialog"&gt; <br/>
+    &lt;div class="modal-content"&gt; <br/>
+     &lt;div class="close-modal" data-dismiss="modal"&gt; <br/>
+      &lt;div class="lr"&gt; <br/>
+       &lt;div class="rl"&gt;&lt;/div&gt; <br/>
+      &lt;/div&gt; <br/>
+     &lt;/div&gt; <br/>
+     &lt;div class="container"&gt; <br/>
+      &lt;div class="row"&gt; <br/>
+       &lt;div class="col-lg-8 mx-auto"&gt; <br/>
+        &lt;div class="modal-body"&gt; &lt;!-- Project Details Go Here --&gt; <br/>
+         &lt;h2 class="text-uppercase"&gt;Terms of use&lt;/h2&gt; <br/>
+         &lt;p class="item-intro text-muted"&gt;You are free to use the material here for your own learning, or learning within your teams. But please always show attribution to me as the originator.&lt;/p&gt; <br/>
+         &lt;p&gt;Use of material for submission to conference or paid workshop is restricted. &lt;br&gt;Please contact me first.&lt;/p&gt; &lt;button class="btn btn-primary" data-dismiss="modal" type="button"&gt; &lt;i class="fas fa-times"&gt;&lt;/i&gt; Close&lt;/button&gt; <br/>
+        &lt;/div&gt; <br/>
+       &lt;/div&gt; <br/>
+      &lt;/div&gt; <br/>
+     &lt;/div&gt; <br/>
+    &lt;/div&gt; <br/>
+   &lt;/div&gt;<br/>
+  &lt;/div&gt; &lt;!-- Modal 2 --&gt; <br/>
+  &lt;div class="portfolio-modal modal fade" id="aboutModal" tabindex="-1" role="dialog" aria-hidden="true"&gt; <br/>
+   &lt;div class="modal-dialog"&gt; <br/>
+    &lt;div class="modal-content"&gt; <br/>
+     &lt;div class="close-modal" data-dismiss="modal"&gt; <br/>
+      &lt;div class="lr"&gt; <br/>
+       &lt;div class="rl"&gt;&lt;/div&gt; <br/>
+      &lt;/div&gt; <br/>
+     &lt;/div&gt; <br/>
+     &lt;div class="container"&gt; <br/>
+      &lt;div class="row"&gt; <br/>
+       &lt;div class="col-lg-8 mx-auto"&gt; <br/>
+        &lt;div class="modal-body"&gt; &lt;!-- Project Details Go Here --&gt; <br/>
+         &lt;h2 class="text-uppercase"&gt;About&lt;/h2&gt; <br/>
+         &lt;p class="item-intro text-muted"&gt;Whilst material is based on real projects, no confidential information or intellectual property has been reproduced.&lt;/p&gt; <br/>
+         &lt;p&gt;All material owned by Mike Talks.&lt;/p&gt; &lt;button class="btn btn-primary" data-dismiss="modal" type="button"&gt; &lt;i class="fas fa-times"&gt;&lt;/i&gt; Close&lt;/button&gt; <br/>
+        &lt;/div&gt; <br/>
+       &lt;/div&gt; <br/>
+      &lt;/div&gt; <br/>
+     &lt;/div&gt; <br/>
+    &lt;/div&gt; <br/>
+   &lt;/div&gt;<br/>
+  &lt;/div&gt; &lt;!-- Footer --&gt; <br/>
+  &lt;footer class="footer"&gt; <br/>
+   &lt;div class="container"&gt; <br/>
+    &lt;div class="row"&gt; <br/>
+     &lt;div class="col-md-4"&gt; &lt;span class="copyright"&gt;Copyright © Mike Talks 2019&lt;/span&gt; <br/>
+     &lt;/div&gt; <br/>
+     &lt;div class="col-md-4"&gt; <br/>
+      &lt;ul class="list-inline social-buttons"&gt; <br/>
+       &lt;li class="list-inline-item"&gt; &lt;a href="https://twitter.com/TestSheepNZ"&gt; &lt;i class="fab fa-twitter"&gt;&lt;/i&gt; &lt;/a&gt; &lt;/li&gt; <br/>
+       &lt;li class="list-inline-item" hidden&gt; &lt;a href="#"&gt; &lt;i class="fab fa-facebook-f"&gt;&lt;/i&gt; &lt;/a&gt; &lt;/li&gt; <br/>
+       &lt;li class="list-inline-item"&gt; &lt;a href="https://www.linkedin.com/in/mike-talks-3423348/"&gt; &lt;i class="fab fa-linkedin-in"&gt;&lt;/i&gt; &lt;/a&gt; &lt;/li&gt; <br/>
+      &lt;/ul&gt; <br/>
+     &lt;/div&gt; <br/>
+     &lt;div class="col-md-4"&gt; <br/>
+      &lt;ul class="list-inline quicklinks"&gt; <br/>
+       &lt;li class="list-inline-item"&gt; &lt;a data-toggle="modal" href="#aboutModal"&gt;About&lt;/a&gt; &lt;/li&gt; <br/>
+       &lt;li class="list-inline-item"&gt; &lt;a data-toggle="modal" href="#termsModal"&gt;Terms of Use&lt;/a&gt; &lt;/li&gt; <br/>
+      &lt;/ul&gt; <br/>
+     &lt;/div&gt; <br/>
+    &lt;/div&gt; <br/>
+   &lt;/div&gt; <br/>
+  &lt;/footer&gt; &lt;!-- Portfolio Modals --&gt; &lt;!-- Bootstrap core JavaScript --&gt; <br/>
+  &lt;script src="vendor/jquery/jquery.min.js"&gt;&lt;/script&gt; <br/>
+  &lt;script src="vendor/bootstrap/js/bootstrap.bundle.min.js"&gt;&lt;/script&gt; &lt;!-- Plugin JavaScript --&gt; <br/>
+  &lt;script src="vendor/jquery-easing/jquery.easing.min.js"&gt;&lt;/script&gt; &lt;!-- Contact form JavaScript --&gt; <br/>
+  &lt;script src="js/jqBootstrapValidation.js"&gt;&lt;/script&gt; <br/>
+  &lt;script src="js/contact_me.js"&gt;&lt;/script&gt; &lt;!-- Custom scripts for this template --&gt; <br/>
+  &lt;script src="js/agency.min.js"&gt;&lt;/script&gt; &lt;!-- Sets up the header--&gt; <br/>
+  &lt;script src="js/main.navigation.js"&gt;&lt;/script&gt; &lt;!-- Footer Modals --&gt; <br/>
+  &lt;script src="js/footer.modals.js"&gt;&lt;/script&gt; <br/>
+  &lt;script&gt;<br/>
+<br/>
+        var buildSelected = -1;<br/>
+        var targetNumber = 0;<br/>
+        var debugOn = true;<br/>
+        var numTurns = 1;<br/>
+<br/>
+        /* Build notes<br/>
+        1	Everyone a winner<br/>
+        2	Offset value<br/>
+        3	Floating number<br/>
+        4	Misdirection<br/>
+        5	Moving target<br/>
+        6	Text error<br/>
+        7	Sweet as<br/>
+        8	Dice 1 times 2<br/>
+        9	Programmed response<br/>
+        10	Odd always low, even always high<br/>
+        11	8 sided dice<br/>
+        12	Dice concatinated<br/>
+        13	Unstable<br/>
+        */<br/>
+<br/>
+        function toggleLogging() {<br/>
+            logAction("Toggle logging");<br/>
+            document.getElementById('logingElement').hidden = !(document.getElementById('logingElement').hidden);<br/>
+        }<br/>
+<br/>
+<br/>
+        function logAction(logEvent) {<br/>
+            console.log(logEvent);<br/>
+            if (debugOn) {<br/>
+                var originalText = document.getElementById('logForm').value;<br/>
+                document.getElementById('logForm').value = originalText + logEvent + "\n";<br/>
+            }<br/>
+        }<br/>
+<br/>
+        function selectBuild(buildNum) {<br/>
+            buildSelected = document.getElementById('buildNumber').value;<br/>
+<br/>
+            if (buildSelected == -1) {<br/>
+                document.getElementById('rollDiceForm').hidden = true;<br/>
+                document.getElementById('numGuessForm').hidden = true;<br/>
+            } else {<br/>
+                document.getElementById('rollDiceForm').hidden = false;<br/>
+                document.getElementById('rollDiceButton').value = "Roll the dice";<br/>
+                document.getElementById('numGuessForm').hidden = true;<br/>
+            }<br/>
+        }<br/>
+<br/>
+        function restoreButtons() {<br/>
+            document.getElementById('rollDiceButton').value = "Re-roll";<br/>
+            document.getElementById('rollDiceButton').disabled = false;<br/>
+            document.getElementById('rollDiceRow').hidden = true;<br/>
+        }<br/>
+<br/>
+        function rollOneDice() {<br/>
+            var randomNumber = Math.random();<br/>
+            var scaledNumber, returnValue;<br/>
+<br/>
+            if (buildSelected == 11) {<br/>
+                scaledNumber = +randomNumber * 8.0;<br/>
+            } else {<br/>
+                scaledNumber = +randomNumber * 6.0;<br/>
+            }<br/>
+<br/>
+            if (buildSelected != 2) {<br/>
+                scaledNumber = +scaledNumber + 1.0;<br/>
+            }<br/>
+<br/>
+            if (buildSelected != 3) {<br/>
+                returnValue = parseInt(+scaledNumber);<br/>
+            } else {<br/>
+                returnValue = +scaledNumber;<br/>
+            }<br/>
+<br/>
+            return returnValue;<br/>
+        }<br/>
+<br/>
+        function rollDice() {<br/>
+            document.getElementById('rollDiceButton').disabled = true;<br/>
+            document.getElementById('rollDiceRow').hidden = false;<br/>
+            document.getElementById('numGuessForm').hidden = true;<br/>
+            document.getElementById('logForm').value = "";<br/>
+            document.getElementById('feedbackLabel').innerHTML = " ";<br/>
+<br/>
+            var dice1, dice2;<br/>
+<br/>
+            dice1 = rollOneDice();<br/>
+            dice2 = rollOneDice();<br/>
+<br/>
+            logAction("Dice One: " + dice1 + ", Dice Two: " + dice2);<br/>
+<br/>
+            if (buildSelected == 8) {<br/>
+                targetNumber = +dice1 + +dice1;<br/>
+<br/>
+            } else if (buildSelected == 12) {<br/>
+                targetNumber = "" + dice1 + dice2;<br/>
+            } else {<br/>
+                targetNumber = +dice1 + +dice2;<br/>
+            }<br/>
+            numTurns = 1;<br/>
+<br/>
+            logAction("Target number: " + targetNumber);<br/>
+            document.getElementById('rollDiceButton').value = "Re-roll";<br/>
+            document.getElementById('rollDiceButton').disabled = false;<br/>
+            document.getElementById('turnNumber').innerHTML = "Turn: " + numTurns;<br/>
+            setTimeout(function () {<br/>
+                document.getElementById('rollDiceRow').hidden = true;<br/>
+                document.getElementById('numGuessForm').hidden = false;<br/>
+                document.getElementById('submitButton').disabled = false;<br/>
+                document.getElementById('numberGuess').value = "";<br/>
+            }, 1000);<br/>
+<br/>
+<br/>
+            if (buildSelected == 13) {<br/>
+                setTimeout(function () {<br/>
+                    logAction("Browser error ... restart");<br/>
+                    document.getElementById('buildNumber').value = -1;<br/>
+                    window.location.reload(false);<br/>
+                }, 8000);<br/>
+            }<br/>
+        }<br/>
+<br/>
+        function giveFeedback(feedbackString, errorMsg) {<br/>
+            var fontSet;<br/>
+            if (errorMsg) {<br/>
+                fontSet = "&lt;font size=\"+2\" color=\"red\"&gt;";<br/>
+            } else {<br/>
+                fontSet = "&lt;font size=\"+2\" color=\"black\"&gt;";<br/>
+            }<br/>
+            document.getElementById('feedbackLabel').innerHTML = fontSet + "&lt;b&gt;&lt;i&gt;" + feedbackString + "&lt;/i&gt;&lt;/b&gt;&lt;/font&gt;";<br/>
+            logAction(feedbackString);<br/>
+        }<br/>
+<br/>
+        function crashBrowser(errorMsg) {<br/>
+            giveFeedback(errorMsg, true);<br/>
+            setTimeout(function () {<br/>
+                document.getElementById('buildNumber').value = -1;<br/>
+                window.location.reload(false);<br/>
+            }, 2000);<br/>
+        }<br/>
+<br/>
+<br/>
+<br/>
+        function submitNumber() {<br/>
+            var guess = document.getElementById('numberGuess').value;<br/>
+            document.getElementById('submitButton').disabled = true;<br/>
+<br/>
+            if (buildSelected == 1) {<br/>
+                giveFeedback("Correct, it took " + numTurns + " turns!", false);<br/>
+                return;<br/>
+            }<br/>
+<br/>
+            if (buildSelected != 9) {<br/>
+<br/>
+                if (isNaN(guess)) {<br/>
+                    if (buildSelected == 6) {<br/>
+                        crashBrowser("Error: NaN not handled, restart", false);<br/>
+                    } else {<br/>
+                        giveFeedback(guess + ": Not a number!", true);<br/>
+                    }<br/>
+                } else {<br/>
+                    if (buildSelected == 6 && guess &gt;= 32000) {<br/>
+                        crashBrowser("Error: Integer overflow, restart", false);<br/>
+                        return;<br/>
+                    }<br/>
+<br/>
+                    if (guess == targetNumber) {<br/>
+                        giveFeedback("Correct, it took " + numTurns + " turns!", false);<br/>
+                        return;<br/>
+                    } else {<br/>
+                        var tooHighText, tooLowText;<br/>
+                        if (buildSelected == 4) {<br/>
+                            tooLowText = ": Too high!";<br/>
+                            tooHighText = ": Too low!";<br/>
+                        } else {<br/>
+                            tooHighText = ": Too high!";<br/>
+                            tooLowText = ": Too low!";<br/>
+                        }<br/>
+<br/>
+                        if (buildSelected == 10) {<br/>
+                            if ((guess % 2) == 0) {<br/>
+                                giveFeedback(guess + tooHighText, true);<br/>
+                            } else {<br/>
+                                giveFeedback(guess + tooLowText, true);<br/>
+                            }<br/>
+                        } else {<br/>
+                            if (guess &gt; targetNumber) {<br/>
+                                giveFeedback(guess + tooHighText, true);<br/>
+                            } else {<br/>
+                                giveFeedback(guess + tooLowText, true);<br/>
+                            }<br/>
+                        }<br/>
+                    }<br/>
+                }<br/>
+            } else {<br/>
+                var tooHighText, tooLowText;<br/>
+                tooHighText = ": Too high!";<br/>
+                tooLowText = ": Too low!";<br/>
+<br/>
+                switch (numTurns) {<br/>
+                    case 1:<br/>
+                        giveFeedback(guess + tooHighText, true);<br/>
+                        break;<br/>
+                    case 2:<br/>
+                        giveFeedback(guess + tooLowText, true);<br/>
+                        break;<br/>
+                    case 3:<br/>
+                        giveFeedback("Correct, it took " + numTurns + " turns!", false);<br/>
+                        return;<br/>
+                }<br/>
+            }<br/>
+<br/>
+            if (buildSelected == 5) {<br/>
+                targetNumber++;<br/>
+            }<br/>
+            document.getElementById('submitButton').disabled = false;<br/>
+            numTurns++;<br/>
+            document.getElementById('turnNumber').innerHTML = "Turn: " + numTurns;<br/>
+            document.getElementById('numberGuess').value = "";<br/>
+        }<br/>
+<br/>
+<br/>
+    &lt;/script&gt; <br/>
+ &lt;/body&gt;<br/>
+&lt;/html&gt;</code></pre></div></body></html>

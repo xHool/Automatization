@@ -1,0 +1,4 @@
+"Story","Title","Result","Date","Stability","Duration (s)"
+"Title of your feature","Title of your scenario","SUCCESS","2023-03-16T09:46:19.0676078-05:00[America/Bogota]","0.0","10.33"
+"Title of your feature","consultando usuario","ERROR","2023-03-15T09:46:13.9907708-05:00[America/Bogota]","0.0","7.43"
+"Title of your feature","creando usuario","SUCCESS","2023-03-14T18:49:34.0403246-05:00[America/Bogota]","0.0","4.42"

@@ -1,0 +1,263 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>Screenshots</title>
+
+<link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+<link rel="apple-touch-icon" sizes="57x57" href="apple-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="apple-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="apple-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="apple-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="apple-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="apple-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="apple-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="apple-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="apple-icon-180x180.png">
+<link rel="icon" type="image/png" sizes="192x192"  href="android-icon-192x192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+<meta name="theme-color" content="#ffffff">
+<link rel="stylesheet" href="bootstrap-icons/font/bootstrap-icons.css"><!-- JQuery -->
+<script type="text/javascript" src="scripts/jquery-1.11.1.min.js"></script><!-- Required Stylesheets -->
+<link href="bootstrap-treeview/dist/bootstrap-treeview.min.css" rel="stylesheet">
+
+<!-- Required Javascript -->
+<script src="bootstrap-treeview/dist/bootstrap-treeview.min.js"></script><!-- DataTables -->
+<link type="text/css" href="datatables/1.11.3/datatables.min.css" rel="stylesheet" />
+<script type="text/javascript" src="datatables/1.11.3/datatables.min.js"></script>
+<script type="text/javascript" src="datatables/1.11.3/time-elapsed-dhms.js"></script>
+
+<link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+<script src="bootstrap/js/bootstrap.min.js"></script>
+
+
+<script>
+    jQuery.fn.dataTable.ext.type.order['time-elapsed-dhms-pre'] = function(data) {
+
+        var matches = data.match(/^(\d+(?:\.\d+)?)\s*([a-z]+)/i);
+        var multipliers = {
+            ms: 1,
+            s: 1000,
+            m: 60000,
+            h: 3600000,
+            d: 86400000
+        };
+
+        if (matches) {
+            var multiplier = multipliers[matches[2].toLowerCase()];
+            return parseFloat(matches[1]) * multiplier;
+        } else {
+            return -1;
+        };
+    };
+</script>
+<link rel="stylesheet" href="css/core.css"/>
+<link rel="stylesheet" href="css/link.css"/>
+<link type="text/css" media="screen" href="css/screen.css" rel="Stylesheet"/>
+<!--CHART.JS-->
+<script src="chartjs/chart.js"></script>
+<script src="chartjs/chartjs-plugin-datalabels@2.0.0"></script>
+<script src="chartjs/patternomaly.min.js"></script>
+<script>
+    // Register the plugin to all charts:
+    Chart.register(ChartDataLabels);
+</script>
+<!-- Nivo Slider -->
+<link rel="stylesheet" href="nivo-slider/3.2/nivo-slider.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="nivo-slider/3.2/themes/default/default.css" type="text/css" media="screen" />
+<script src="nivo-slider/3.2/jquery.nivo.slider.pack.js" type="text/javascript"></script>
+
+    <script type="text/javascript">
+
+        function getUrlVars() {
+            var vars = {};
+            var parts = window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi, function (m, key, value) {
+                vars[key] = value;
+            });
+            return vars;
+        }
+
+        var screenshotIndex = getUrlVars()["screenshot"];
+
+        $(window).load(function () {
+            $('#slider').nivoSlider({
+                startSlide: screenshotIndex,
+                effect: 'fade',
+                animSpeed: 200,
+                manualAdvance: true
+            });
+        });
+
+        $(window).keydown(function(e) {
+            switch(e.which) {
+                case 37:
+                    $('a.nivo-prevNav').click();
+                    break;
+                case 39:
+                    $('a.nivo-nextNav').click();
+                    break;
+            }
+        });
+    </script>
+
+</head>
+
+<body>
+<div id="topheader">
+    <div id="topbanner">
+        <div id="logo"><a href="index.html"><img src="images/serenity-logo.png" border="0"/></a></div>
+        <div id="projectname-banner" style="float:right">
+            <span class="projectname">
+                <span class="projecttitle">Serenity BDD Report</span>
+                <span class="projectsubtitle"></span>
+            </span>
+        </div>
+    </div>
+</div>
+
+<div class="middlecontent">
+    <div id="contenttop">
+        <div class="middlebg">
+            <span class="breadcrumbs">
+                <a href="index.html">Home</a>
+                > <span class="truncate-40"><a
+                    href="311c4df8d597d7afc63d01e6da75ff571a09cef3d1af5d111024bc89f107bc30.html">Title Of Your Feature</a></span>
+                > <span class="truncate-60"><a
+                    href="ca111e90b23d8aa18f90f36820c4a74ff0f73839b5409305e32035f4b21d2c20.html">Selecting filters and products </a></span>
+                > Screenshots
+            </span>
+        </div>
+        <div class="rightbg"></div>
+    </div>
+
+    <div class="clr"></div>
+
+    <!--/* starts second table*/-->
+<div>
+    <ul class="nav nav-tabs" role="tablist">
+        <li class="active">
+            <a href="#"><i class="bi bi-journal-check"></i> Overall Test Results</a>
+        </li>
+        <li >
+            <a href="capabilities.html"><i class="bi bi-journal-text"></i> Requirements</a>
+        </li>
+    </ul>
+    <span class="date-and-time"><a href="build-info.html"><i class="bi bi-info-circle"></i></a> Report generated 28-02-2023 18:48</span>
+    <br style="clear:left"/>
+</div>
+
+    <div class="clr"></div>
+
+
+    <div id="contentbody">
+        <div class="titlebar">
+            <div class="story-title">
+                <table class="outcome-header">
+                    <tr>
+                        <td>
+                            <div>
+                                <h3 class="discreet-story-header">
+                                    <i class="fs-2 bi bi-chat-left-quote large-icon"></i>
+                                    <span class="story-header-title">Title Of Your Feature</span>
+                                    <span class="badge tag-badge" style="">Feature</span>
+                                </h3>
+
+                                <div class="discreet-requirement-narrative-title">
+                                I want to use this template for my feature file
+                                </div>
+                            </div>
+
+                        </td>
+                        <td valign="top" align="right">
+                            <p class="tag">
+                                <span class="badge tag-badge" style="background:default;"
+                                    <i class="bi bi-tag-fill"></i>&nbsp;<a class="tagLink" style="background:default;" href="bca18eb34184f466810ee7a90d04748e21a2df6dea7311083e75ce6b8ed2a2f5.html">Tag1
+                                    (tag)</a>
+                                </span>
+                            </p>
+                            <p class="tag">
+                                <span class="badge tag-badge" style="background:default;"
+                                    <i class="bi bi-tag-fill"></i>&nbsp;<a class="tagLink" style="background:default;" href="ec3644e9342d32fe427f28bfa83a3084b3999493dbafdd95c2d0cbb278b71b7f.html">Tag
+                                    (tag)</a>
+                                </span>
+                            </p>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <div class="story-title">
+                <table class="outcome-header">
+                    <tr>
+                        <td colspan="2" class="test-title-bar">
+                            <span class="outcome-icon"><a href='##beforetable'><i class='bi bi-check-circle-fill success-icon fa-2x' title='SUCCESS'></i></a></span>
+                            <span class="test-case-title">
+                                <span class="success-color">Selecting filters and products
+                                    <span class="related-issue-title"></span>
+                                </span>
+                            </span>
+
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <div class="clr"></div>
+
+
+    <div id="beforetable"></div>
+    <div id="contenttilttle">
+        <div class="slider-wrapper theme-default">
+            <div id="slider">
+                <img src="c154533b1b60407feee0504787a805fe82ecc80404c42aa70125f592b686eee7.png" title=" Given You must be on the SwagLabs page. &quot;Swag Labs&quot;" width="929"/>
+                <img src="c154533b1b60407feee0504787a805fe82ecc80404c42aa70125f592b686eee7.png" title=" Automator opens the browser at https://www.saucedemo.com/" width="929"/>
+                <img src="c154533b1b60407feee0504787a805fe82ecc80404c42aa70125f592b686eee7.png" title=" Given You must be on the SwagLabs page. &quot;Swag Labs&quot; (completed)" width="929"/>
+                <img src="987d9a61e0e7964dc349ea13cc3d5139341660b4b64442524dd83a59c29e3a1e.png" title=" When Credentials are added." width="929"/>
+                <img src="987d9a61e0e7964dc349ea13cc3d5139341660b4b64442524dd83a59c29e3a1e.png" title=" Automator set credentials" width="929"/>
+                <img src="987d9a61e0e7964dc349ea13cc3d5139341660b4b64442524dd83a59c29e3a1e.png" title=" Automator enters 'standard_user' into Username field: " width="929"/>
+                <img src="987d9a61e0e7964dc349ea13cc3d5139341660b4b64442524dd83a59c29e3a1e.png" title=" Automator enters 'secret_sauce' into Password field: " width="929"/>
+                <img src="cb0f539256bf22830ceb6a7b44febf96b35df339f54cbf3aafb43fc964b006e5.png" title=" Automator enters 'secret_sauce' into Password field:  (completed)" width="929"/>
+                <img src="cb0f539256bf22830ceb6a7b44febf96b35df339f54cbf3aafb43fc964b006e5.png" title=" Automator console message" width="929"/>
+                <img src="cb0f539256bf22830ceb6a7b44febf96b35df339f54cbf3aafb43fc964b006e5.png" title=" Automator clicks on Login button: " width="929"/>
+                <img src="9cf7a02d054a2fef6471fb3976ac09359723f41ec1d9457b6b5f05da43cbc732.png" title=" Automator clicks on Login button:  (completed)" width="929"/>
+                <img src="9cf7a02d054a2fef6471fb3976ac09359723f41ec1d9457b6b5f05da43cbc732.png" title=" Automator set credentials (completed)" width="929"/>
+                <img src="9cf7a02d054a2fef6471fb3976ac09359723f41ec1d9457b6b5f05da43cbc732.png" title=" When Credentials are added. (completed)" width="929"/>
+                <img src="9cf7a02d054a2fef6471fb3976ac09359723f41ec1d9457b6b5f05da43cbc732.png" title=" Then The text on the inventory page is validated. &quot;Products&quot;" width="929"/>
+                <img src="9cf7a02d054a2fef6471fb3976ac09359723f41ec1d9457b6b5f05da43cbc732.png" title=" Then text of should be 'Products'" width="929"/>
+                <img src="9cf7a02d054a2fef6471fb3976ac09359723f41ec1d9457b6b5f05da43cbc732.png" title=" Given Each of the filters are selected." width="929"/>
+                <img src="9cf7a02d054a2fef6471fb3976ac09359723f41ec1d9457b6b5f05da43cbc732.png" title=" When Two products are loaded in the cart." width="929"/>
+                <img src="9cf7a02d054a2fef6471fb3976ac09359723f41ec1d9457b6b5f05da43cbc732.png" title=" Automator set inventory" width="929"/>
+                <img src="9cf7a02d054a2fef6471fb3976ac09359723f41ec1d9457b6b5f05da43cbc732.png" title=" Automator select filter" width="929"/>
+                <img src="9cf7a02d054a2fef6471fb3976ac09359723f41ec1d9457b6b5f05da43cbc732.png" title=" Automator selects Name (A to Z) on Select Filter: " width="929"/>
+                <img src="ba90833e3054ce19c6b1f3a52ad8d8ec84303ba21407f13ccda455d48c8f9d06.png" title=" Automator selects Name (Z to A) on Select Filter: " width="929"/>
+                <img src="ba90833e3054ce19c6b1f3a52ad8d8ec84303ba21407f13ccda455d48c8f9d06.png" title=" Automator selects Price (low to high) on Select Filter: " width="929"/>
+                <img src="9013884574eaf5aa7637d15cf1b6c6c2d27e3edae3d8a67659f6e07ab01728d3.png" title=" Automator selects Price (low to high) on Select Filter:  (completed)" width="929"/>
+                <img src="9013884574eaf5aa7637d15cf1b6c6c2d27e3edae3d8a67659f6e07ab01728d3.png" title=" Automator selects Price (high to low) on Select Filter: " width="929"/>
+                <img src="082e648edfbfc1f4cb9f2b8389d05cf7d645a2b8a705b498efc922918f72e124.png" title=" Automator selects Price (high to low) on Select Filter:  (completed)" width="929"/>
+                <img src="082e648edfbfc1f4cb9f2b8389d05cf7d645a2b8a705b498efc922918f72e124.png" title=" Automator select filter (completed)" width="929"/>
+                <img src="082e648edfbfc1f4cb9f2b8389d05cf7d645a2b8a705b498efc922918f72e124.png" title=" Automator clicks on Select Filter: " width="929"/>
+                <img src="fc02a3605dbe541848e2a466055b3383334285836b7313fe39566c1b0d1485c6.png" title=" Automator clicks on Select Filter:  (completed)" width="929"/>
+                <img src="fc02a3605dbe541848e2a466055b3383334285836b7313fe39566c1b0d1485c6.png" title=" Automator clicks on Shopping Cart Buttom: " width="929"/>
+                <img src="8d7bf562edd9267c108583d2d2d88d1bbffa8137b0b7d10a1b66bd6ffc186799.png" title=" Automator clicks on Shopping Cart Buttom:  (completed)" width="929"/>
+                <img src="8d7bf562edd9267c108583d2d2d88d1bbffa8137b0b7d10a1b66bd6ffc186799.png" title=" Automator set inventory (completed)" width="929"/>
+                <img src="8d7bf562edd9267c108583d2d2d88d1bbffa8137b0b7d10a1b66bd6ffc186799.png" title=" When Two products are loaded in the cart. (completed)" width="929"/>
+                <img src="8d7bf562edd9267c108583d2d2d88d1bbffa8137b0b7d10a1b66bd6ffc186799.png" title=" Then We validate the shopping cart.: <span class='success-color'>SUCCESS</span>" width="929"/>
+            </div>
+        </div>
+
+
+    </div>
+</div>
+<div id="beforefooter"></div>
+<div id="bottomfooter">
+    <span class="version">Serenity BDD version 3.3.0</span>
+</div>
+</body>
+</html>

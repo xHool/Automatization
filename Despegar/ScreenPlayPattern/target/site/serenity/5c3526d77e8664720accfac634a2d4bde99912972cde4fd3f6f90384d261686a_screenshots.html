@@ -1,0 +1,289 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>Screenshots</title>
+
+<link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+<link rel="apple-touch-icon" sizes="57x57" href="apple-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="apple-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="apple-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="apple-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="apple-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="apple-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="apple-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="apple-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="apple-icon-180x180.png">
+<link rel="icon" type="image/png" sizes="192x192"  href="android-icon-192x192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+<meta name="theme-color" content="#ffffff">
+<link rel="stylesheet" href="bootstrap-icons/font/bootstrap-icons.css"><!-- JQuery -->
+<script type="text/javascript" src="scripts/jquery-1.11.1.min.js"></script><!-- Required Stylesheets -->
+<link href="bootstrap-treeview/dist/bootstrap-treeview.min.css" rel="stylesheet">
+
+<!-- Required Javascript -->
+<script src="bootstrap-treeview/dist/bootstrap-treeview.min.js"></script><!-- DataTables -->
+<link type="text/css" href="datatables/1.11.3/datatables.min.css" rel="stylesheet" />
+<script type="text/javascript" src="datatables/1.11.3/datatables.min.js"></script>
+<script type="text/javascript" src="datatables/1.11.3/time-elapsed-dhms.js"></script>
+
+<link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+<script src="bootstrap/js/bootstrap.min.js"></script>
+
+
+<script>
+    jQuery.fn.dataTable.ext.type.order['time-elapsed-dhms-pre'] = function(data) {
+
+        var matches = data.match(/^(\d+(?:\.\d+)?)\s*([a-z]+)/i);
+        var multipliers = {
+            ms: 1,
+            s: 1000,
+            m: 60000,
+            h: 3600000,
+            d: 86400000
+        };
+
+        if (matches) {
+            var multiplier = multipliers[matches[2].toLowerCase()];
+            return parseFloat(matches[1]) * multiplier;
+        } else {
+            return -1;
+        };
+    };
+</script>
+<link rel="stylesheet" href="css/core.css"/>
+<link rel="stylesheet" href="css/link.css"/>
+<link type="text/css" media="screen" href="css/screen.css" rel="Stylesheet"/>
+<!--CHART.JS-->
+<script src="chartjs/chart.js"></script>
+<script src="chartjs/chartjs-plugin-datalabels@2.0.0"></script>
+<script src="chartjs/patternomaly.min.js"></script>
+<script>
+    // Register the plugin to all charts:
+    Chart.register(ChartDataLabels);
+</script>
+<!-- Nivo Slider -->
+<link rel="stylesheet" href="nivo-slider/3.2/nivo-slider.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="nivo-slider/3.2/themes/default/default.css" type="text/css" media="screen" />
+<script src="nivo-slider/3.2/jquery.nivo.slider.pack.js" type="text/javascript"></script>
+
+    <script type="text/javascript">
+
+        function getUrlVars() {
+            var vars = {};
+            var parts = window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi, function (m, key, value) {
+                vars[key] = value;
+            });
+            return vars;
+        }
+
+        var screenshotIndex = getUrlVars()["screenshot"];
+
+        $(window).load(function () {
+            $('#slider').nivoSlider({
+                startSlide: screenshotIndex,
+                effect: 'fade',
+                animSpeed: 200,
+                manualAdvance: true
+            });
+        });
+
+        $(window).keydown(function(e) {
+            switch(e.which) {
+                case 37:
+                    $('a.nivo-prevNav').click();
+                    break;
+                case 39:
+                    $('a.nivo-nextNav').click();
+                    break;
+            }
+        });
+    </script>
+
+</head>
+
+<body>
+<div id="topheader">
+    <div id="topbanner">
+        <div id="logo"><a href="index.html"><img src="images/serenity-logo.png" border="0"/></a></div>
+        <div id="projectname-banner" style="float:right">
+            <span class="projectname">
+                <span class="projecttitle">Serenity BDD Report</span>
+                <span class="projectsubtitle"></span>
+            </span>
+        </div>
+    </div>
+</div>
+
+<div class="middlecontent">
+    <div id="contenttop">
+        <div class="middlebg">
+            <span class="breadcrumbs">
+                <a href="index.html">Home</a>
+                > <span class="truncate-40"><a
+                    href="311c4df8d597d7afc63d01e6da75ff571a09cef3d1af5d111024bc89f107bc30.html">Title Of Your Feature</a></span>
+                > <span class="truncate-60"><a
+                    href="5c3526d77e8664720accfac634a2d4bde99912972cde4fd3f6f90384d261686a.html">Filtros Aerolineas </a></span>
+                > Screenshots
+            </span>
+        </div>
+        <div class="rightbg"></div>
+    </div>
+
+    <div class="clr"></div>
+
+    <!--/* starts second table*/-->
+<div>
+    <ul class="nav nav-tabs" role="tablist">
+        <li class="active">
+            <a href="#"><i class="bi bi-journal-check"></i> Overall Test Results</a>
+        </li>
+        <li >
+            <a href="capabilities.html"><i class="bi bi-journal-text"></i> Requirements</a>
+        </li>
+    </ul>
+    <span class="date-and-time"><a href="build-info.html"><i class="bi bi-info-circle"></i></a> Report generated 09-03-2023 09:40</span>
+    <br style="clear:left"/>
+</div>
+
+    <div class="clr"></div>
+
+
+    <div id="contentbody">
+        <div class="titlebar">
+            <div class="story-title">
+                <table class="outcome-header">
+                    <tr>
+                        <td>
+                            <div>
+                                <h3 class="discreet-story-header">
+                                    <i class="fs-2 bi bi-chat-left-quote large-icon"></i>
+                                    <span class="story-header-title">Title Of Your Feature</span>
+                                    <span class="badge tag-badge" style="">Feature</span>
+                                </h3>
+
+                                <div class="discreet-requirement-narrative-title">
+                                I want to use this template for my feature file
+                                </div>
+                            </div>
+
+                        </td>
+                        <td valign="top" align="right">
+                            <p class="tag">
+                                <span class="badge tag-badge" style="background:default;"
+                                    <i class="bi bi-tag-fill"></i>&nbsp;<a class="tagLink" style="background:default;" href="bca18eb34184f466810ee7a90d04748e21a2df6dea7311083e75ce6b8ed2a2f5.html">Tag1
+                                    (tag)</a>
+                                </span>
+                            </p>
+                            <p class="tag">
+                                <span class="badge tag-badge" style="background:default;"
+                                    <i class="bi bi-tag-fill"></i>&nbsp;<a class="tagLink" style="background:default;" href="ec3644e9342d32fe427f28bfa83a3084b3999493dbafdd95c2d0cbb278b71b7f.html">Tag
+                                    (tag)</a>
+                                </span>
+                            </p>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <div class="story-title">
+                <table class="outcome-header">
+                    <tr>
+                        <td colspan="2" class="test-title-bar">
+                            <span class="outcome-icon"><a href='##beforetable'><i class='bi bi-check-circle-fill success-icon fa-2x' title='SUCCESS'></i></a></span>
+                            <span class="test-case-title">
+                                <span class="success-color">Filtros Aerolineas
+                                    <span class="related-issue-title"></span>
+                                </span>
+                            </span>
+
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <div class="clr"></div>
+
+
+    <div id="beforetable"></div>
+    <div id="contenttilttle">
+        <div class="slider-wrapper theme-default">
+            <div id="slider">
+                <img src="815b4f0d39790d26d8390f2dc1106eb87e8558dfdbc307d608e3a57fb69fe5df.png" title=" Given Se debe estar en la pagina de &quot;Despegar&quot;." width="929"/>
+                <img src="815b4f0d39790d26d8390f2dc1106eb87e8558dfdbc307d608e3a57fb69fe5df.png" title=" Automatizador Maestro opens the browser at https://www.despegar.com.co/vuelos/" width="929"/>
+                <img src="815b4f0d39790d26d8390f2dc1106eb87e8558dfdbc307d608e3a57fb69fe5df.png" title=" Given Se debe estar en la pagina de &quot;Despegar&quot;. (completed)" width="929"/>
+                <img src="b7478fc1f71cf6f5184b39e310b36cd74ab88ac03dd0335f6f6fc7a620368ae6.png" title=" When Se llenan los datos para la busqueda del vuelo.
+| Origen | C&uacute;cuta, Norte de Santander, Colombia |
+| Destino | Bogot&aacute;, Colombia |
+| DiaIda | 24 |
+| DiaVuelta | 30 |
+| Pasajeros | 2 |" width="929"/>
+                <img src="b7478fc1f71cf6f5184b39e310b36cd74ab88ac03dd0335f6f6fc7a620368ae6.png" title=" Automatizador maestro set vuelos" width="929"/>
+                <img src="b7478fc1f71cf6f5184b39e310b36cd74ab88ac03dd0335f6f6fc7a620368ae6.png" title=" Automatizador Maestro clicks on Origen Text: " width="929"/>
+                <img src="013550c4b91588dd54da45408081ba9a5aa5be8c5b5324247735551a13ebe6b6.png" title=" Automatizador Maestro clicks on Origen Text:  (completed)" width="929"/>
+                <img src="013550c4b91588dd54da45408081ba9a5aa5be8c5b5324247735551a13ebe6b6.png" title=" Automatizador Maestro enters 'C&uacute;cuta, Norte de Santander, Colombia' into Origen Text: " width="929"/>
+                <img src="af2026d1577815e673f9e6d75c765a0fc5dbbfc61a37dcfb4697c191eb8ec85a.png" title=" Automatizador Maestro enters 'C&uacute;cuta, Norte de Santander, Colombia' into Origen Text:  (completed)" width="929"/>
+                <img src="af2026d1577815e673f9e6d75c765a0fc5dbbfc61a37dcfb4697c191eb8ec85a.png" title=" Automatizador Maestro clicks on Origen Select Options: " width="929"/>
+                <img src="aaba08c8b8d53a57c32f5201e573519311448d3cfb1f52d00e877a95d56b1a5b.png" title=" Automatizador Maestro clicks on Origen Select Options:  (completed)" width="929"/>
+                <img src="aaba08c8b8d53a57c32f5201e573519311448d3cfb1f52d00e877a95d56b1a5b.png" title=" Automatizador Maestro clicks on Destino Text: " width="929"/>
+                <img src="4ec675e2ef9233996ede34e316b07038c1e0f142311e4ae4bebbe24342eb12ca.png" title=" Automatizador Maestro clicks on Destino Text:  (completed)" width="929"/>
+                <img src="4ec675e2ef9233996ede34e316b07038c1e0f142311e4ae4bebbe24342eb12ca.png" title=" Automatizador Maestro enters 'Bogot&aacute;, Colombia' into Destino Text: " width="929"/>
+                <img src="c31502df4576469c9fea60d27aee618a925909b2a058ec287a4e16db8c9d65a0.png" title=" Automatizador Maestro enters 'Bogot&aacute;, Colombia' into Destino Text:  (completed)" width="929"/>
+                <img src="c31502df4576469c9fea60d27aee618a925909b2a058ec287a4e16db8c9d65a0.png" title=" Automatizador Maestro clicks on Origen Select Options: " width="929"/>
+                <img src="b20bba4f648ca8193e7c15c28b3b584409a0bdea69716177def94b14f284a6db.png" title=" Automatizador Maestro clicks on Origen Select Options:  (completed)" width="929"/>
+                <img src="b20bba4f648ca8193e7c15c28b3b584409a0bdea69716177def94b14f284a6db.png" title=" Automatizador Maestro clicks on Fecha Ida Target: " width="929"/>
+                <img src="2a553b5b821926c6bc77031f37b076533c472cc18206fe046b5446635aacf274.png" title=" Automatizador Maestro clicks on Fecha Ida Target:  (completed)" width="929"/>
+                <img src="2a553b5b821926c6bc77031f37b076533c472cc18206fe046b5446635aacf274.png" title=" Automatizador Maestro clicks on Fecha Ida Text: " width="929"/>
+                <img src="24b6654961d648f61d29f62353b9a88077cef73e5d027223f9972f05847dc41d.png" title=" Automatizador Maestro clicks on Fecha Ida Text:  (completed)" width="929"/>
+                <img src="24b6654961d648f61d29f62353b9a88077cef73e5d027223f9972f05847dc41d.png" title=" Automatizador Maestro clicks on Fecha Vuelta Target: " width="929"/>
+                <img src="90b5d0227fbce4b8f8d24e6ff67d2c17fea3c607fc1f72d116141c8abd4fd19e.png" title=" Automatizador Maestro clicks on Fecha Vuelta Target:  (completed)" width="929"/>
+                <img src="90b5d0227fbce4b8f8d24e6ff67d2c17fea3c607fc1f72d116141c8abd4fd19e.png" title=" Automatizador Maestro clicks on Fecha Vuelta Text: " width="929"/>
+                <img src="bf0873daccb7d411ab2f4abf5deb898f5c9a9fd7387d533be0b3af99580b70a9.png" title=" Automatizador Maestro clicks on Fecha Vuelta Text:  (completed)" width="929"/>
+                <img src="bf0873daccb7d411ab2f4abf5deb898f5c9a9fd7387d533be0b3af99580b70a9.png" title=" Automatizador Maestro clicks on Pasajeros Target: " width="929"/>
+                <img src="888dd54f7292c723e6b681fd8437a3788441aa1cd5bfac502d4c5a13e532d635.png" title=" Automatizador Maestro clicks on Pasajeros Target:  (completed)" width="929"/>
+                <img src="888dd54f7292c723e6b681fd8437a3788441aa1cd5bfac502d4c5a13e532d635.png" title=" Automatizador maestro press button" width="929"/>
+                <img src="888dd54f7292c723e6b681fd8437a3788441aa1cd5bfac502d4c5a13e532d635.png" title=" Automatizador Maestro clicks on Pasajeros Button: " width="929"/>
+                <img src="420060fe7331035ac9221e655b78f0efa30173c3d40ae7dd6bbb1b4014a361cf.png" title=" Automatizador Maestro clicks on Pasajeros Button:  (completed)" width="929"/>
+                <img src="420060fe7331035ac9221e655b78f0efa30173c3d40ae7dd6bbb1b4014a361cf.png" title=" Automatizador maestro press button (completed)" width="929"/>
+                <img src="420060fe7331035ac9221e655b78f0efa30173c3d40ae7dd6bbb1b4014a361cf.png" title=" Automatizador Maestro clicks on Buscar Button: " width="929"/>
+                <img src="9fd6f726b41d2ace4315e0b95408dda810a0ea9e5709fe5fc98fa5c729e8df66.png" title=" Automatizador Maestro clicks on Buscar Button:  (completed)" width="929"/>
+                <img src="9fd6f726b41d2ace4315e0b95408dda810a0ea9e5709fe5fc98fa5c729e8df66.png" title=" Automatizador maestro set vuelos (completed)" width="929"/>
+                <img src="9fd6f726b41d2ace4315e0b95408dda810a0ea9e5709fe5fc98fa5c729e8df66.png" title=" When Se llenan los datos para la busqueda del vuelo.
+| Origen | C&uacute;cuta, Norte de Santander, Colombia |
+| Destino | Bogot&aacute;, Colombia |
+| DiaIda | 24 |
+| DiaVuelta | 30 |
+| Pasajeros | 2 | (completed)" width="929"/>
+                <img src="15330455aba0c7feec7ea8e87c0533b325375135cea6f68806cc24b872bb5cf5.png" title=" Then I validate the outcomes" width="929"/>
+                <img src="15330455aba0c7feec7ea8e87c0533b325375135cea6f68806cc24b872bb5cf5.png" title=" Then component of should be (true)" width="929"/>
+                <img src="692ca1f13a358f170a5dd3cfc03c2e68bb9b44c281210cdf82267dc5cee696f1.png" title=" Then component of should be (true) (completed)" width="929"/>
+                <img src="692ca1f13a358f170a5dd3cfc03c2e68bb9b44c281210cdf82267dc5cee696f1.png" title=" Then I validate the outcomes (completed)" width="929"/>
+                <img src="efd96552eed66c0462b3ad27051753224f8d0371091021f0c72bd633d80fdb1a.png" title=" When I complete action" width="929"/>
+                <img src="efd96552eed66c0462b3ad27051753224f8d0371091021f0c72bd633d80fdb1a.png" title=" Automatizador maestro set filtros" width="929"/>
+                <img src="efd96552eed66c0462b3ad27051753224f8d0371091021f0c72bd633d80fdb1a.png" title=" Automatizador Maestro clicks on Close Button: " width="929"/>
+                <img src="efd96552eed66c0462b3ad27051753224f8d0371091021f0c72bd633d80fdb1a.png" title=" Automatizador Maestro clicks on Filtro Button: " width="929"/>
+                <img src="ed263ebc90c7f6d14bfdca6bb3fddccb7c84fe24b6b2922b03f576792e8fb9ba.png" title=" Automatizador Maestro clicks on Filtro Button:  (completed)" width="929"/>
+                <img src="ed263ebc90c7f6d14bfdca6bb3fddccb7c84fe24b6b2922b03f576792e8fb9ba.png" title=" Automatizador maestro search airlines" width="929"/>
+                <img src="5d735730b93de4976813768cdf8ae1a1a7284405411c35b0c065f27f4d1276fe.png" title=" Automatizador maestro search airlines (completed)" width="929"/>
+                <img src="5d735730b93de4976813768cdf8ae1a1a7284405411c35b0c065f27f4d1276fe.png" title=" Automatizador maestro search airlines" width="929"/>
+                <img src="5d735730b93de4976813768cdf8ae1a1a7284405411c35b0c065f27f4d1276fe.png" title=" Automatizador maestro set filtros (completed)" width="929"/>
+                <img src="5d735730b93de4976813768cdf8ae1a1a7284405411c35b0c065f27f4d1276fe.png" title=" When I complete action (completed): <span class='success-color'>SUCCESS</span>" width="929"/>
+            </div>
+        </div>
+
+
+    </div>
+</div>
+<div id="beforefooter"></div>
+<div id="bottomfooter">
+    <span class="version">Serenity BDD version 3.3.0</span>
+</div>
+</body>
+</html>
